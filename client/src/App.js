@@ -14,6 +14,27 @@ class App extends Component {
     ]
   };
 
+  updateCountrySelected(index, country) {
+    let cList = [...this.state.countryList];
+    if (index < this.state.countryList.length) {
+      cList[index].countryCode = country.code;
+      cList[index].countryName = country.name;
+      this.setState({
+        countryList: cList
+      });
+    } else {
+      cList.push({
+        countryCode: country.code,
+        countryName: country.name,
+        year: this.state.initialYear
+      });
+      this.setState({
+        countryList: cList,
+        initialYear: 2015
+      });
+    }
+  }
+
   updateActiveYear(index, value) {
     if (index < this.state.countryList.length) {
       let cList = [...this.state.countryList];
@@ -38,6 +59,7 @@ class App extends Component {
           <Table
             initialYear={this.state.initialYear}
             updateActiveYear={this.updateActiveYear.bind(this)}
+            updateCountrySelected={this.updateCountrySelected.bind(this)}
             fieldsToShow={this.state.fieldsToShow}
             countryList={this.state.countryList}
           />

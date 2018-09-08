@@ -1,0 +1,10 @@
+.input-drop{
+    position:relative;
+}
+
+.input-drop-menu{
+    position:absolute;
+    left:0;
+    z-index:2;
+    background-color: aliceblue;
+}

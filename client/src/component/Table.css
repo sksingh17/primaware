@@ -7,7 +7,7 @@
   padding: 10px 4px;
 }
 
-.content-table tr td:first-child {
+.content-table .td-enhance{
   font-size: 1.2em;
   font-weight: 600;
 }

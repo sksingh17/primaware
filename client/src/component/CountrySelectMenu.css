@@ -1,0 +1,18 @@
+.input-drop table tr td{
+    margin:4px;
+    padding:8px 12px;
+}
+
+.input-drop table thead tr td{
+    font-weight: 600;
+}
+
+.input-drop-menu {
+    max-height:400px;
+    overflow:auto;
+}
+
+.input-drop-item:hover:not(.active){
+    background: rgb(23,162,184,0.3) ;
+    cursor: pointer;
+}
