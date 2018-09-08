@@ -1,61 +1,54 @@
 import React from "react";
 import "./Table.css";
-
+import YearMenu from "./YearMenu";
 export default props => {
   let headColumn = [];
-  headColumn.push(<td />);
-  let yearddlist=[];
+  headColumn.push(<td key={0} />);
+  let yearddlist = [];
   for (let i = 1990; i <= 2016; ++i) {
     yearddlist.push(<div class="dropdown-item">{i}</div>);
   }
-  props.countryList.forEach((element, index) => {
+  for (let i = 0; i <= props.countryList.length; ++i) {
+    let name = "Country";
+    let year = props.initialYear;
+    if (props.countryList.length !== i) {
+      name = props.countryList[i].countryName;
+      year = props.countryList[i].year;
+    }
     headColumn.push(
-      <td>
+      <td key={i+1}>
         <div>
-          <input type="text" placeholder={element.countryName} />
+          <input type="text" placeholder={name} />
         </div>
-        <div class="dropdown mt-2">
+        <div className="dropdown mt-2">
           <button
             type="button"
-            class="text-left btn btn-info dropdown-toggle btn-block"
+            className="text-left btn btn-info dropdown-toggle btn-block"
             data-toggle="dropdown"
           >
-            {element.year || 2015}
+            {year}
           </button>
-          <div class="dropdown-menu">{yearddlist}</div>
+          <YearMenu
+            updateActiveYear={value => {
+              props.updateActiveYear(i, value);
+            }}
+            activeYear={year}
+          />
         </div>
         <div className="h-20 w-50" />{" "}
       </td>
     );
-  });
-  headColumn.push(
-    <td>
-      <div>
-        <input type="text" placeholder="Country" />
-      </div>
-      <div class="dropdown mt-2">
-        <button
-          type="button"
-          class="text-left btn btn-info dropdown-toggle btn-block"
-          data-toggle="dropdown"
-        >
-          2015
-        </button>
-        <div class="dropdown-menu">{yearddlist}</div>
-      </div>
-      <div className="h-20 w-50" />
-    </td>
-  );
+  }
 
   let bodyRow = props.fieldsToShow.map(element => {
     let bodyColumn = [];
-    bodyColumn.push(<td>{element}</td>);
+    bodyColumn.push(<td key={0}>{element}</td>);
     props.countryList.forEach((cElement, index) => {
-      bodyColumn.push(<td>{cElement[element]}</td>);
+      bodyColumn.push(<td key={index+1}>{cElement[element]}</td>);
     });
-    bodyColumn.push(<td />);
+    bodyColumn.push(<td key={-1} />);
 
-    return <tr>{bodyColumn}</tr>;
+    return <tr key={element}>{bodyColumn}</tr>;
   });
 
   return (

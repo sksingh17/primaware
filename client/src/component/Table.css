@@ -1,3 +1,7 @@
+.content-table input[type=text]{
+  padding:3px 6px;
+}
+
 .content-table tr td {
   margin: 4px;
   padding: 10px 4px;
@@ -13,6 +17,7 @@
     overflow:auto;
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover:not(.active){
     background: rgb(23,162,184,0.3) ;
+    cursor: pointer;
 }
