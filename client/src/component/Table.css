@@ -1,0 +1,18 @@
+.content-table tr td {
+  margin: 4px;
+  padding: 10px 4px;
+}
+
+.content-table tr td:first-child {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.dropdown-menu{
+    max-height:400px;
+    overflow:auto;
+}
+
+.dropdown-item:hover{
+    background: rgb(23,162,184,0.3) ;
+}

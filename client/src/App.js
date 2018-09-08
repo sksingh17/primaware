@@ -1,18 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { Component } from "react";
+import "./App.css";
+import Table from "./component/Table";
 class App extends Component {
+  state = {
+    fieldsToShow: ["Capital Name", "Population"],
+    countryList:[
+      {
+        countryCode:'us',
+        countryName:'USA',
+        year:'2014'
+      }
+    ]
+  };
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+      <div className="container-fluid">
+        <header className="row bg-dark">
+          <h1 className="m-2  text-left text-light display-4">Primaware</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <section className="row">
+          <Table fieldsToShow={this.state.fieldsToShow} countryList={this.state.countryList} />
+        </section>
       </div>
     );
   }
