@@ -8,8 +8,8 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use('/search', searchRouter);
-app.use('/detail', detailRouter);
+app.use('/primaware/api/search', searchRouter);
+app.use('/primaware/api/detail', detailRouter);
 
 app.listen(port, () => {
   console.log(`Primaware Server listening on ${port}`);
