@@ -31,7 +31,12 @@ export default class CountryUserInput extends Component {
   render() {
     return (
       <section>
-        <div className="input-drop">
+        <div
+          className="input-drop"
+          onClick={() => {
+            this.setState({ displayMenu: !this.state.displayMenu });
+          }}
+        >
           <input
             type="text"
             placeholder={this.props.name}
@@ -54,7 +59,7 @@ export default class CountryUserInput extends Component {
             displayMenu={this.state.displayMenu}
             csList={this.state.csList}
             updateCountrySelected={country => {
-              this.setState({ displayMenu: false });
+              this.setState({ displayMenu: false, csList: [] });
               this.props.updateCountrySelected(country);
             }}
           />

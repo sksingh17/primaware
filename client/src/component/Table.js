@@ -33,15 +33,15 @@ export default props => {
     let bodyColumn = [];
     bodyColumn.push(
       <td key={0} className="td-enhance">
-        {element}
+        {element.displayName}
       </td>
     );
     props.countryList.forEach((cElement, index) => {
-      bodyColumn.push(<td key={index + 1}>{cElement[element]}</td>);
+      bodyColumn.push(<td key={index + 1}>{cElement[element.key]}</td>);
     });
     bodyColumn.push(<td key={-1} />);
 
-    return <tr key={element}>{bodyColumn}</tr>;
+    return <tr key={element.key}>{bodyColumn}</tr>;
   });
 
   return (
