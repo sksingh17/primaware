@@ -12,7 +12,7 @@ export default props => {
         }}
       >
         <td>{element.name}</td>
-        <td>{element.code}</td>
+        <td>{element.code.toLowerCase()}</td>
       </tr>
     );
   });

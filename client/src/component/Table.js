@@ -7,7 +7,7 @@ export default props => {
   let headColumn = [];
   headColumn.push(<td key={0} />);
   for (let i = 0; i <= props.countryList.length; ++i) {
-    let name = "Country";
+    let name = "Country Name / Code";
     let year = props.initialYear;
     if (props.countryList.length !== i) {
       name = props.countryList[i].countryName;

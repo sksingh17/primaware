@@ -55,7 +55,7 @@ class App extends Component {
         <header className="row bg-dark">
           <h1 className="m-2  text-left text-light display-4">Primaware</h1>
         </header>
-        <section className="row">
+        <section className="row content">
           <Table
             initialYear={this.state.initialYear}
             updateActiveYear={this.updateActiveYear.bind(this)}
