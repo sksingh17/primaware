@@ -23,10 +23,10 @@ export default props => {
   return (
     <div
       className={
-        "input-drop-menu " + (props.displayMenu ? "d-block" : "d-none")
+        "w-100 input-drop-menu " + (props.displayMenu ? "d-block" : "d-none")
       }
     >
-      <table>
+      <table className='w-100'>
         <thead>
           <tr className="border-bottom">
             <td>Name</td>

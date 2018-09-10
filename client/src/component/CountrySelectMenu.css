@@ -13,6 +13,7 @@
 }
 
 .input-drop-item:hover:not(.active){
-    background: rgb(23,162,184,0.3) ;
+    background-color: #0077b3;
     cursor: pointer;
+    color:white;
 }

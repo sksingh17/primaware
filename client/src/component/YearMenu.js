@@ -11,5 +11,5 @@ export default props => {
     }
   }
 
-  return <div className="dropdown-menu">{yearddlist}</div>;
+  return <div className="w-100 dropdown-menu">{yearddlist}</div>;
 };

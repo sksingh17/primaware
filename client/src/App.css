@@ -1,0 +1,13 @@
+.heading-panel{
+height:8vh;
+background-color: #0077b3;
+}
+
+h1{
+    font-size:5vh;
+}
+
+.content{
+    height:92vh;
+overflow:auto;
+}

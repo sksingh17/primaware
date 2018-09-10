@@ -67,7 +67,7 @@ export default class CountryUserInput extends Component {
         <div className="dropdown mt-2">
           <button
             type="button"
-            className="text-left btn btn-info dropdown-toggle btn-block"
+            className="text-left btn btn-secondary dropdown-toggle btn-block"
             data-toggle="dropdown"
           >
             {this.props.year}

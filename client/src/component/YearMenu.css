@@ -1,3 +1,14 @@
+.dropdown-menu{
+  max-height:400px;
+  overflow:auto;
+}
+
+.dropdown-item:hover:not(.active){
+background-color: #0077b3;
+color:white;
+cursor: pointer;
+}
+
 .dropdown-menu .active{
-    background-color: #117a8b;
+    background-color: #0077b3;
   }

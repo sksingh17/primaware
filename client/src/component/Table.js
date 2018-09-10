@@ -32,7 +32,7 @@ export default props => {
   let bodyRow = props.fieldsToShow.map(element => {
     let bodyColumn = [];
     bodyColumn.push(
-      <td key={0} className="td-enhance">
+      <td className='align-middle' key={0} className="td-enhance">
         {element.displayName}
       </td>
     );

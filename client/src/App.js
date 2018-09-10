@@ -105,8 +105,8 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <header className="row bg-dark">
-          <h1 className="m-2  text-left text-light display-4">Primaware</h1>
+        <header className="row  heading-panel sticky-top">
+          <h1 className="m-2  text-left text-light">Primaware</h1>
         </header>
         <section className="row content">
           <Table

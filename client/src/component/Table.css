@@ -5,7 +5,7 @@
 
 .content-table tr td {
   margin: 2px;
-  padding: 10px 4px;
+  padding: 9px 4px;
   text-align: center;
 }
 
@@ -14,12 +14,6 @@
   font-weight: 600;
 }
 
-.dropdown-menu{
-    max-height:400px;
-    overflow:auto;
-}
-
-.dropdown-item:hover:not(.active){
-    background: rgb(23,162,184,0.3) ;
-    cursor: pointer;
+.content-table > tbody tr:nth-child(odd) {
+  color:#0077b3;
 }
