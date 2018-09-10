@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Table from "./component/Table";
 import CountryDetailService from "./service/CountryDetailService";
+import { IoMdMenu } from 'react-icons/io';
 
 class App extends Component {
   constructor() {
@@ -105,8 +106,9 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-        <header className="row  heading-panel sticky-top">
+        <header className="row heading-panel sticky-top">
           <h1 className="m-2  text-left text-light">Primaware</h1>
+          <div className='filter-icon-container'><IoMdMenu fill={'#ddd'} height={'5'} width={'5'} /></div>
         </header>
         <section className="row content">
           <Table

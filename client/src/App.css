@@ -1,6 +1,20 @@
 .heading-panel{
 height:8vh;
 background-color: #0077b3;
+position:relative
+}
+
+.filter-icon-container{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform: translate(-50%,-50%);
+    cursor:pointer;
+}
+
+.filter-icon-container svg{
+    height:1.8em;
+    width:1.8em;
 }
 
 h1{

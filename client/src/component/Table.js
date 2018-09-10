@@ -32,12 +32,14 @@ export default props => {
   let bodyRow = props.fieldsToShow.map(element => {
     let bodyColumn = [];
     bodyColumn.push(
-      <td className='align-middle' key={0} className="td-enhance">
+      <td className='align-middle td-enhance' key={0}>
         {element.displayName}
       </td>
     );
     props.countryList.forEach((cElement, index) => {
-      bodyColumn.push(<td key={index + 1}>{cElement[element.key]}</td>);
+      bodyColumn.push(<td className='align-middle' key={index + 1}>
+      <span className='align-middle'>{cElement[element.key]}</span>
+      </td>);
     });
     bodyColumn.push(<td key={-1} />);
 
