@@ -21,6 +21,17 @@ app.use(function(req, res, next) {
 app.use('/primaware/api/search', searchRouter);
 app.use('/primaware/api/detail', detailRouter);
 
+app.use((error, req, res, next) => {
+  console.log(`Request Error`);
+  console.log(error);
+  res.status(error.status || 500).json({
+    error:{
+      message:error.message
+    }
+  });
+  next();
+});
+
 app.listen(port, () => {
   console.log(`Primaware Server listening on ${port}`);
 });
